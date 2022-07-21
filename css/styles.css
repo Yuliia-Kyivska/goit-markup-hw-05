@@ -166,7 +166,8 @@ body {
   height: 4px;
   border-radius: 2px;
   background-color: var(--blue-logo-color);
-  bottom: 0;
+
+  bottom: -1px;
 }
 
 /* ***************************** ** */
@@ -347,6 +348,7 @@ body {
 }
 .we-do-text {
   position: absolute;
+  z-index: 1;
   bottom: 0;
   left: 0;
   right: 0;
@@ -630,12 +632,13 @@ h3.team-title {
   top: 221px;
   left: 536px;
   right: 536px;
+  z-index: 100;
 }
 
 .is-hidden {
   visibility: hidden;
   opacity: 0;
-  pointer-events: all;
+  pointer-events: none;
 }
 
 .backdrop {
