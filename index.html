@@ -27,7 +27,7 @@
           <a href="index.html" class="logo">Web<span class="dark-logo">Studio</span></a>
 
           <ul class="nav-list list">
-            <li>
+            <li class="nav-item">
               <a href="index.html" class="active-page nav-link link">Студия</a>
             </li>
 
@@ -66,21 +66,17 @@
       <!--герой-->
       <section class="hero">
         <div class="container">
-
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
 
           <button type="button" class="hero-button" data-modal-open>Заказать услугу</button>
 
           <div class="backdrop is-hidden" data-modal>
             <div class="modal">
-              
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat aliquid
-                 incidunt a consequuntur praesentium amet autem corporis odit
-                 voluptates minima totam quasi reprehenderit, explicabo tempore
-                  veritatis unde nesciunt quaerat accusamus!</p>
-
-              <button data-modal-close>close</button>
-
+              <button data-modal-close class="close-bt">
+                <svg class="close-icon" width="18px" height="18px">
+                  <use href="./images/icons.svg#close-black"></use>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
@@ -151,7 +147,10 @@
           <h2 class="section-title">Чем мы занимаемся</h2>
 
           <ul class="we-do-list card-set list">
-            <li class="card-item">
+            <li class="card-item we-do-item">
+              <div class="we-do-text">
+                <p class="we-do-title">десктопные приложения</p>
+              </div>
               <img
                 src="./images/create-websites.jpg"
                 width="370"
@@ -160,7 +159,10 @@
               />
             </li>
 
-            <li class="card-item">
+            <li class="card-item we-do-item">
+              <div class="we-do-text">
+                <p class="we-do-title">мобильные приложения</p>
+              </div>
               <img
                 src="./images/create-mobile-applications.jpg"
                 width="370"
@@ -168,7 +170,10 @@
                 alt="создаем мобильные приложения"
               />
             </li>
-            <li class="card-item">
+            <li class="card-item we-do-item">
+              <div class="we-do-text">
+                <p class="we-do-title">дизайнерские решения</p>
+              </div>
               <img
                 src="./images/create-web-designs.jpg"
                 width="370"
