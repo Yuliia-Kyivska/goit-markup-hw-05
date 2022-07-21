@@ -53,12 +53,11 @@
           <li>
             <a href="tel:+380961111111" class="contact-link link">
               <svg class="tel-icon icon" width="10px" height="16px">
-                <use href="./images/icons.svg#telephone">
-                </use>
-                </svg>
+                <use href="./images/icons.svg#telephone"></use>
+              </svg>
               +38 096 111 11 11
             </a>
-            </li>
+          </li>
         </ul>
       </div>
     </header>
@@ -67,8 +66,23 @@
       <!--герой-->
       <section class="hero">
         <div class="container">
+
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="hero-button">Заказать услугу</button>
+
+          <button type="button" class="hero-button" data-modal-open>Заказать услугу</button>
+
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat aliquid
+                 incidunt a consequuntur praesentium amet autem corporis odit
+                 voluptates minima totam quasi reprehenderit, explicabo tempore
+                  veritatis unde nesciunt quaerat accusamus!</p>
+
+              <button data-modal-close>close</button>
+
+            </div>
+          </div>
         </div>
       </section>
 
@@ -222,7 +236,7 @@
               <div class="team-content">
                 <h3 class="team-title">Ольга Репина</h3>
                 <p class="team-specialist">Frontend Developer</p>
-              
+
                 <ul class="list social-list">
                   <li class="social-item">
                     <a href="javascript:;" target="_blank" class="link social-link-icon">
@@ -264,7 +278,7 @@
               <div class="team-content">
                 <h3 class="team-title">Николай Тарасов</h3>
                 <p class="team-specialist">Marketing</p>
-              
+
                 <ul class="list social-list">
                   <li class="social-item">
                     <a href="javascript:;" target="_blank" class="link social-link-icon">
@@ -306,7 +320,7 @@
               <div class="team-content">
                 <h3 class="team-title">Михаил Ермаков</h3>
                 <p class="team-specialist">UI Designer</p>
-             
+
                 <ul class="list social-list">
                   <li class="social-item">
                     <a href="javascript:;" target="_blank" class="link social-link-icon">
@@ -462,5 +476,7 @@
         </div>
       </div>
     </footer>
+    <!-- Ставимо перед закриваючим тегом body -->
+    <script src="./js/modal.js"></script>
   </body>
 </html>

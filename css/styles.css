@@ -543,3 +543,18 @@ align-items: baseline;
 .footer.social-link-icon {
     fill: var(--white-color);
 }
+
+.backdrop .is-hidden{
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.backdrop{
+  position: fixed;
+ 
+  
+  width: 20%;
+  height: 20%;
+  background-color: #dfd4d4;
+
+}
