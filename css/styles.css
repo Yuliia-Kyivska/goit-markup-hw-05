@@ -145,7 +145,7 @@ body {
   align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
-  transition-property: color var(--blue-logo-color);
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: var(--cub-bez);
 }
@@ -278,20 +278,17 @@ body {
   height: 100%;
   padding: 63px 24px;
   transform: translateY(100%);
-  transition: transform 500ms ease;
+  transition: transform 500ms ease, opacity 500ms ease;
   user-select: none;
-
-  font-style: normal;
-  font-weight: 400;
+  background-color: var(--bg-portf);
   font-size: 18px;
   line-height: 1.56;
-  letter-spacing: 0.03em;
-
   color: #ffffff;
 }
-.portfolio-img-bg:hover .portfolio-overlay {
+.portfolio-link:hover .portfolio-overlay,
+.portfolio-link:focus .portfolio-overlay {
   transform: translateY(0%);
-  background-color: var(--bg-portf);
+
   opacity: 1;
 }
 
@@ -301,7 +298,7 @@ body {
 .portfolio-link {
   display: flex;
   flex-direction: column;
-  transition-property: box-shadow 0px 4px 4px 0px var(--button-shadow);
+  transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: var(--cub-bez);
 }
@@ -362,20 +359,17 @@ body {
   z-index: 1;
   bottom: 0;
   left: 0;
-  right: 0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 70px;
+  padding: 27px;
   background-color: var(--bgcolor-wdtext);
 }
 .we-do-title {
-  font-style: normal;
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
   text-align: center;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white-color);
 }
@@ -484,8 +478,7 @@ h3.team-title {
   line-height: 1.6;
   border-radius: 4px;
   padding: 6px 22px;
-  transition-property: background-color var(--blue-logo-color), color var(--white-color),
-    box-shadow 0px 4px 4px 0px var(--button-shadow);
+  transition-property: background-color, color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: var(--cub-bez);
 }
@@ -537,7 +530,7 @@ h3.team-title {
   color: var(--white-color);
 }
 .address .link {
-  transition-property: color var(--blue-logo-color);
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: var(--cub-bez);
 }
@@ -565,17 +558,23 @@ h3.team-title {
   background-color: var(--footer-icon);
   width: 44px;
   height: 44px;
-  transition-property: fill var(--white-color);
+  transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: var(--cub-bez);
+}
+
+.social-link-icon:hover,
+.social-link-icon:focus {
+  background-color: var(--blue-logo-color);
 }
 
 .footer .social-icon {
   fill: var(--white-color);
 }
+
 .social-icon {
   fill: var(--social-icon);
-  transition-property: fill var(--white-color);
+  transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: var(--cub-bez);
 }
@@ -583,10 +582,6 @@ h3.team-title {
 .social-link-icon:hover .social-icon,
 .social-link-icon:focus .social-icon {
   fill: var(--white-color);
-}
-.social-link-icon:hover,
-.social-link-icon:focus {
-  background-color: var(--blue-logo-color);
 }
 
 /* постоянные клиенты */
@@ -613,7 +608,7 @@ h3.team-title {
   padding: 16px;
   border: 1px solid var(--social-icon);
   border-radius: 4px;
-  transition-property: border 1px solid var(--blue-logo-color), fill var(--blue-logo-color);
+  transition-property: border, fill;
   transition-duration: 250ms;
   transition-timing-function: var(--cub-bez);
 }
@@ -674,7 +669,13 @@ h3.team-title {
   background-color: var(--bgmodal);
   box-shadow: 0px 1px 3px var(--team-btm), 0px 1px 1px var(--team-bl), 0px 2px 1px var(--team-br);
   border-radius: 4px;
+  transition: transform 300ms ease-out;
 }
+
+.backdrop.is-hidden .modal {
+  transform: scale(0) rotate(360deg);
+}
+
 .close-bt {
   position: absolute;
   cursor: pointer;
